@@ -1,0 +1,32 @@
+npm i init -y
+npm i mongoose
+npm i ejs
+npm i express
+npm i ejs-mate
+bootstrap used
+fontawesome used
+hopscotch for api check fetching the api
+
+
+for validation used joi (npm i joi) server side validation
+
+connect-flash  = view only one time and after refreshing it will be not shown
+
+passwort is used for authentication you can shinup using other website like signup or login with insta, facebook or google etc.
+npm i passport
+npm i passport-local
+npm i passport-local-mongoose
+
+passport.intialize() = A middleware that intialize passport
+passport.session() = A web application needs the ability to identify users as they browse from page to page. This series of requests and responses, each associated with the same user, is known as session
+
+User.plugin(passportLocalMongoose);  //passportLocalMongoose automatically assigned username, password, salting and hashing we don't have to build from scratch
+
+
+multer  is a node.js middleware for handling multipart data, which is primarly used for uploading files
+
+cloudinary for uploading files  npm i cloudinary
+
+npm i dotenv
+
+npm i cloudinary multer-storage-cloudinary
