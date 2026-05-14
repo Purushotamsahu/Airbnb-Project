@@ -7,7 +7,7 @@
     <div class="card col-6 offset-2 show-card listing-card">
         <img src="<%= listing.image.url || listing.image %>" class="card-img-top show-img" alt="listing_image">
         <div class="card-body">
-        <p class="card-text"><%= listing.owner.username %></p>
+        <p class="card-text"><%= listing.owner ? listing.owner.username : "Admin User" %></p>
         <p class="card-text"><%= listing.description %> </p>
         <p class="card-text">&#8377; <%= listing.price.toLocaleString("en-IN") %> </p>
         <p class="card-text"><%= listing.location %> </p>
@@ -16,7 +16,7 @@
     </div>
     </div>
     
-    <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
+    <% if(currUser && listing.owner && currUser._id.equals(listing.owner._id)){ %>
     <div class="col-1 offset-2" style="display: flex;">
     <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark edit-btn">Edit</a>
     <form method="post" action="/listings/<%= listing._id %>/?_method=DELETE">
